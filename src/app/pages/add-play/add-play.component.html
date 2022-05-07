@@ -1,0 +1,34 @@
+<div class="main_component">
+    <div class="div-flex">
+        <h1 #title>Uj eloadas hozzaadasa</h1>
+        <form [formGroup]="addPlayForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <mat-label for="date">Idopont: </mat-label>
+                <input matInput #date type="date" formControlName="date" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="time">Kezdes: </mat-label>
+                <input matInput #time type="text" formControlName="time" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="place">Helyszin: </mat-label>
+                <input matInput #place type="text" formControlName="place" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="title">Eloadas: </mat-label>
+                <input matInput #title type="text" formControlName="title" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="price">Jegyar: </mat-label>
+                <input matInput #price type="number" formControlName="price" />
+            </mat-form-field>
+            <div>
+                <span class="buttons">
+                    <button mat-raised-button color="primary" id="addButton" type="submit">Hozzaad</button>
+                </span><span class="buttons">
+                    <button mat-raised-button color="primary" (click)="goBack()">Megsem</button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>

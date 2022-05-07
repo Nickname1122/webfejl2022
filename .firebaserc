@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webfejl-2022-c8a95": {
+      "hosting": {
+        "theater": [
+          "webfejl-2022-c8a95"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webfejl-2022-c8a95"
+  }
+}

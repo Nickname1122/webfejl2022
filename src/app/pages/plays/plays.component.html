@@ -1,0 +1,36 @@
+<div class="container">
+    <table mat-table>
+        <thead>
+            <tr mat-header-row>
+                <th></th>
+                <th mat-header-cell scope="col">Idopont</th>
+                <th mat-header-cell scope="col">Kezdes</th>
+                <th mat-header-cell scope="col">Helyszin</th>
+                <th mat-header-cell scope="col">Eloadas</th>
+                <th mat-header-cell scope="col">Jegyar</th>
+                <th class="button-col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr mat-row *ngFor="let play of plays; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td mat-cell>{{ play.date }}</td>
+                <td mat-cell>{{ play.time }}</td>
+                <td mat-cell>{{ play.place }}</td>
+                <td mat-cell>{{ play.title }}</td>
+                <td mat-cell>{{ play.price }}</td>
+                <td mat-cell>
+                    <span>
+                        <button mat-raised-button (click)="buy(play)" color="primary">Vasarlas</button>
+                    </span>
+                    <span>
+                        <button mat-raised-button (click)="update(play)" color="primary">Szerkeztes</button>
+                    </span>
+                    <span>
+                        <button mat-raised-button (click)="del(play.id)" color="primary">Torles</button>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,34 @@
+<div class="main_component">
+    <div class="div-flex">
+        <form [formGroup]="playForm">
+            <mat-form-field>
+                <mat-label for="date">Idopont: </mat-label>
+                <input matInput #date type="text" disabled />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="time">Kezdes: </mat-label>
+                <input matInput #time type="text" disabled />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="place">Helyszin: </mat-label>
+                <input matInput #place type="text" disabled />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="title">Eloadas: </mat-label>
+                <input matInput #title type="text" disabled />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="price">Jegyar: </mat-label>
+                <input matInput #price type="text" disabled />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="quantity">Mennyiseg: </mat-label>
+                <input matInput #quantity type="number" (click)="updateTotal()" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="total">Osszesen: </mat-label>
+                <input matInput #total type="text" disabled />
+            </mat-form-field>
+        </form>
+    </div>
+</div>
